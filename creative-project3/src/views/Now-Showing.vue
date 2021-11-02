@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is a browsing page</h1>
+    <h1>This is a Now Showing page</h1>
   </div>
 </template>
