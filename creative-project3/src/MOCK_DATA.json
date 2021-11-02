@@ -1,4 +1,4 @@
-[{"id":1,"title":"By the Sword","director_last_name":"Skeete","company_name":"Sony Pictures","genre":"Drama","day_of_the_week":"Saturday","time":"7:14 PM"},
+let mock = [{"id":1,"title":"By the Sword","director_last_name":"Skeete","company_name":"Sony Pictures","genre":"Drama","day_of_the_week":"Saturday","time":"7:14 PM"},
 {"id":2,"title":"Dollman","director_last_name":"MacEveley","company_name":"Paramount","genre":"Action|Comedy|Crime","day_of_the_week":"Tuesday","time":"10:34 PM"},
 {"id":3,"title":"Valentin (Valentín)","director_last_name":"Houseman","company_name":"Universal Pictures","genre":"Drama","day_of_the_week":"Thursday","time":"6:46 PM"},
 {"id":4,"title":"Nosferatu (Nosferatu, eine Symphonie des Grauens)","director_last_name":"Larvin","company_name":"Disney","genre":"Horror","day_of_the_week":"Saturday","time":"10:24 AM"},
