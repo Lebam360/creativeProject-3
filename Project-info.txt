@@ -1,0 +1,24 @@
+Make mock data of movie showings
+
+Make a movie theater website
+
+Home page shows one movie per day of the week 
+Write up about theater?
+
+Browse page shows all movies orgainzied by company, day of the week title
+drop down menu and search bar?
+for days of the week - could have the days orgainzed by time?
+title should be all movies with a search bar
+company is a list of all movies by that company (like country from cart lab)
+
+Buy a ticket - a button that allows you to buy tickets
+Maybe not
+Your tickets page - shows all of the tickets you purchased (cart?)
+
+Now showing - show all movies of that day? (use moment.format("dddd") to get current day of the week) add moment.js to depencies
+
+Need:
+pictures for the movies?
+Logo?
+
+https://ic.byu.edu/
