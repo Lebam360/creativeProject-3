@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
+    <ul class="">
     <li class="pure-menu-item"><a @click="select('Sunday')" href="#" class="pure-menu-link">Sunday</a></li>
       <li class="pure-menu-item"><a @click="select('Monday')" href="#" class="pure-menu-link">Monday</a></li>
       <li class="pure-menu-item"><a @click="select('Tuesday')" href="#" class="pure-menu-link">Tuesday</a></li>
@@ -43,3 +43,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.pure-menu-item {
+  color: #BEBEBE;
+}
+</style>

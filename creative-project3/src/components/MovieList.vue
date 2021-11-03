@@ -5,6 +5,7 @@
       <div class="info">
         <h1>{{movie.title}}</h1>
         <h6>{{movie.company_name}}</h6>
+        <h5>{{movie.genre}}</h5>
       </div>
       <div class="image">
         <!--<img :src="'/images/movies/'+movie.image">-->
@@ -61,10 +62,10 @@ export default {
 }
 
 .info {
-  background: #2C3E50;
+  background-color: #800000;
   color: #bacbdd;
   padding: 10px 30px;
-  height: 80px;
+  height: 220px;
 }
 
 .info h1 {

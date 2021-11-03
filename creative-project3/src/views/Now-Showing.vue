@@ -21,7 +21,30 @@ export default {
   computed: {
     movies() {
       let today  = moment().format('dddd') /*need to change to today*/
-      return this.$root.$data.movies.filter(movie => movie.day_of_the_week === today);
+      let movieArray = this.$root.$data.movies.filter(movie => movie.day_of_the_week === today);
+      let orgainzedArray = new Array;
+      movieArray.forEach(function(item) {
+        if(orgainzedArray.length == 0) { // add the first item if the array is empty
+        orgainzedArray.push(item);
+        }
+        else {
+          orgainzedArray.push(item);
+          let time = item.time;
+          const thisItem = (element) => element.time == item.time;
+          let index = orgainzedArray.findIndex(thisItem);
+          if (index != 0) {
+            let prevTime = orgainzedArray[index-1].time;
+            if (time < prevTime){
+              // if the previous time is greater than the current time swap values
+              let temp = orgainzedArray[index];
+              orgainzedArray[index] = orgainzedArray[index-1];
+              orgainzedArray[index-1] = temp;
+           }
+          }
+        }
+      });
+      console.log(orgainzedArray);
+      return orgainzedArray;
     },
     moment: () => moment,
   },

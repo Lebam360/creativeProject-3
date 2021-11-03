@@ -84,7 +84,7 @@ let mock = [{
   title:"Simon Magus",
   director_last_name:"Merrgan",
   company_name:"Warner Bros.",
-  genre:"Drama|Fantasy|Mystery|Romance",
+  genre:"Drama|Fantasy| Mystery|Romance",
   day_of_the_week:"Sunday",
   time:"7:00 PM"},
 {
@@ -124,7 +124,7 @@ let mock = [{
   title:"Redemption: The Stan Tookie Williams Story",
   director_last_name:"Milmo",
   company_name:"Paramount",
-  genre:"Crime|Documentary|Drama",
+  genre:"Crime|Documentary| Drama",
   day_of_the_week:"Wednesday",
   time:"8:30 PM"},
 {
@@ -182,7 +182,7 @@ let mock = [{
   title:"Attila (Attila the Hun)",
   director_last_name:"Sirl",
   company_name:"Pixar",
-  genre:"Action|Adventure|Drama|War",
+  genre:"Action|Adventure| Drama|War",
   day_of_the_week:"Tuesday",
   time:"5:30 PM"
 },
@@ -236,7 +236,7 @@ let mock = [{
   title:"Presenting Lily Mars",
   director_last_name:"Callard",
   company_name:"Sony Pictures",
-  genre:"Comedy|Musical|Romance",
+  genre:"Comedy|Musical| Romance",
   day_of_the_week:"Tuesday",
   time:"6:30 PM"
 },
