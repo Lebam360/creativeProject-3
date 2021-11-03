@@ -16,7 +16,7 @@ let mock = [{
   genre:"Action|Comedy|Crime",
   day_of_the_week:"Tuesday",
   time:"10:30 PM",
-  image:"dollman.jpg"
+  image:"dollman.jpeg"
 },
 {
   id:3,
@@ -492,7 +492,7 @@ let mock = [{
   genre:"Crime|Drama",
   day_of_the_week:"Thursday",
   time:"8:00 PM",
-  image:"Pickpocket"
+  image:"pickpocket.jpg"
 }]
 
 export default mock;

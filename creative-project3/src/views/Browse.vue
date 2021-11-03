@@ -46,6 +46,5 @@ export default {
 
 <style scoped>
 .pure-menu-item {
-  color: #BEBEBE;
 }
 </style>
