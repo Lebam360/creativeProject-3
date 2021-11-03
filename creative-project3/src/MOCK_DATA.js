@@ -5,7 +5,8 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Drama",
   day_of_the_week:"Saturday",
-  time:"7:00 PM"
+  time:"7:00 PM",
+  image:"by-the-sword.jpg"
 },
 {
   id:2,
@@ -14,7 +15,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Action|Comedy|Crime",
   day_of_the_week:"Tuesday",
-  time:"10:30 PM"
+  time:"10:30 PM",
+  image:"dollman.jpg"
 },
 {
   id:3,
@@ -23,7 +25,8 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Drama",
   day_of_the_week:"Thursday",
-  time:"6:00 PM"
+  time:"6:00 PM",
+  image:"Valentin.jpg"
 },
 {
   id:4,
@@ -32,7 +35,8 @@ let mock = [{
   company_name:"Disney",
   genre:"Horror",
   day_of_the_week:"Saturday",
-  time:"10:30 AM"
+  time:"10:30 AM",
+  image:"nosferatu.jpg"
 },
 {
   id:5,
@@ -343,10 +347,10 @@ let mock = [{
   time:"10:30 PM"},
 {
   id:42,
-  title:"Nekromantik",
+  title:"Inception",
   director_last_name:"Winning",
   company_name:"Disney",
-  genre:"Comedy|Horror",
+  genre:"Comedy|Mystery",
   day_of_the_week:"Monday",
   time:"5:30 PM"},
 {
