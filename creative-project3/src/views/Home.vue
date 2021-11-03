@@ -12,11 +12,6 @@
         tab, you can search for movies by what day they will be showing. To learn more about us, click on the "About"
         page!</p>
     </div>
-    <div class="movie" v-for="movie in movies" :key="movie.id">
-      <div class="info">
-        <h1>{{movie.title}}</h1>
-      </div>
-    </div>
   </div>
 </template>
 
