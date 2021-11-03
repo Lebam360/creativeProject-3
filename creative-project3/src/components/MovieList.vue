@@ -2,13 +2,13 @@
 <div class="wrapper">
   <div class="movies">
     <div class="movie" v-for="movie in movies" :key="movie.id">
+      <div class="image">
+        <img :src="'/images/posters/'+movie.image">
+      </div>
       <div class="info">
         <h1>{{movie.title}}</h1>
         <h6>{{movie.company_name}}</h6>
         <h5>{{movie.genre}}</h5>
-      </div>
-      <div class="image">
-        <!--<img :src="'/images/movies/'+movie.image">-->
       </div>
       <div class="time">
         <h2>{{movie.day_of_the_week}}</h2>

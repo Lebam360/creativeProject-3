@@ -45,7 +45,8 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Comedy",
   day_of_the_week:"Saturday",
-  time:"2:00 PM"
+  time:"2:00 PM",
+  image:"toy.jpg"
 },
 {
   id:6,
@@ -54,7 +55,8 @@ let mock = [{
   company_name:"Disney",
   genre:"Drama|War",
   day_of_the_week:"Tuesday",
-  time:"10:30 PM"
+  time:"10:30 PM",
+  image:"nomad.jpg"
 },
 {
   id:7,
@@ -63,14 +65,18 @@ let mock = [{
   company_name:"Disney",
   genre:"Documentary",
   day_of_the_week:"Tuesday",
-  time:"4:00 PM"},
+  time:"4:00 PM",
+  image:"like-water.jpg"
+},
 {
   id:8,
   title:"My Science Project",
   director_last_name:"Hansberry","company_name":"Universal Pictures",
   genre:"Adventure|Sci-Fi",
   day_of_the_week:"Wednesday",
-  time:"6:00 PM"},
+  time:"6:00 PM",
+  image:"science-project.jpg"
+},
 {
   id:9,
   title:"Birdcage",
@@ -78,7 +84,9 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Comedy",
   day_of_the_week:"Saturday",
-  time:"8:00 PM"},
+  time:"8:00 PM",
+  image:"birdcage.jpg"
+},
 {
   id:10,
   title:"Simon Magus",
@@ -86,7 +94,9 @@ let mock = [{
   company_name:"Warner Bros.",
   genre:"Drama|Fantasy| Mystery|Romance",
   day_of_the_week:"Sunday",
-  time:"7:00 PM"},
+  time:"7:00 PM",
+  image:"simon-magus.jpg"
+},
 {
   id:11,
   title:"Sister Street Fighter (Onna hissatsu ken)",
@@ -94,7 +104,9 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Action|Drama",
   day_of_the_week:"Tuesday",
-  time:"7:30 PM"},
+  time:"7:30 PM",
+  image:"sister-street-fighter.jpg"
+},
 {
   id:12,
   title:"Sherlock Holmes and the Masks of Death",
@@ -102,7 +114,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Mystery",
   day_of_the_week:"Wednesday",
-  time:"8:30 PM"},
+  time:"8:30 PM",
+  image:"sherlock.jpg"
+},
 {
   id:13,
   title:"Abendland",
@@ -110,7 +124,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Documentary",
   day_of_the_week:"Saturday",
-  time:"9:00 PM"},
+  time:"9:00 PM",
+  image:"abendland.jpg"
+},
 {
   id:14,
   title:"Darkman II: Return of Durant",
@@ -118,7 +134,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Action|Crime|Horror",
   day_of_the_week:"Tuesday",
-  time:"4:00 PM"},
+  time:"4:00 PM",
+  image:"darkman.jpg"
+},
 {
   id:15,
   title:"Redemption: The Stan Tookie Williams Story",
@@ -126,7 +144,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Crime|Documentary| Drama",
   day_of_the_week:"Wednesday",
-  time:"8:30 PM"},
+  time:"8:30 PM",
+  image:"redemption.jpg"
+},
 {
   id:16,
   title:"Corner Gas: The Movie",
@@ -134,7 +154,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Comedy",
   day_of_the_week:"Sunday",
-  time:"6:30 PM"},
+  time:"6:30 PM",
+  image:"corner-gas.jpg"
+},
 {
   id:17,
   title:"The Swedish Moment",
@@ -142,7 +164,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Comedy",
   day_of_the_week:"Friday",
-  time:"8:00 PM"},
+  time:"8:00 PM",
+  image:"swedish-moment.jpg"
+},
 {
   id:18,
   title:"Lesson of the Evil (Aku no kyôten)",
@@ -150,7 +174,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Thriller",
   day_of_the_week:"Tuesday",
-  time:"6:30 PM"
+  time:"6:30 PM",
+  image:"lesson-evil.jpg"
 },
 {
   id:19,"title":"Je m'appelle Elisabeth",
@@ -158,7 +183,9 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"(no genres listed)",
   day_of_the_week:"Wednesday",
-  time:"3:00 PM"},
+  time:"3:00 PM",
+  image:"elisabeth.jpg"
+},
 {
   id:20,
   title:"Ricky Rapper (Risto Räppääjä)",
@@ -166,7 +193,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Comedy|Musical",
   day_of_the_week:"Saturday",
-  time:"3:30 PM"
+  time:"3:30 PM",
+  image:"ricky-rapper.jpg"
 },
 {
   id:21,
@@ -175,7 +203,8 @@ let mock = [{
   company_name:"Disney",
   genre:"Comedy|Drama",
   day_of_the_week:"Saturday",
-  time:"12:00 PM"
+  time:"12:00 PM",
+  image:"punchline.jpg"
 },
 {
   id:22,
@@ -184,7 +213,8 @@ let mock = [{
   company_name:"Pixar",
   genre:"Action|Adventure| Drama|War",
   day_of_the_week:"Tuesday",
-  time:"5:30 PM"
+  time:"5:30 PM",
+  image:"atila.jpg"
 },
 {
   id:23,
@@ -193,7 +223,8 @@ let mock = [{
   company_name:"Warner Bros.",
   genre:"Drama",
   day_of_the_week:"Wednesday",
-  time:"3:00 PM"
+  time:"3:00 PM",
+  image:"fireflies.jpg"
 },
 {
   id:24,
@@ -202,7 +233,8 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Comedy",
   day_of_the_week:"Friday",
-  time:"10:00 PM"
+  time:"10:00 PM",
+  image:"american-virgin.jpg"
 },
 {
   id:25,
@@ -211,7 +243,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Animation",
   day_of_the_week:"Thursday",
-  time:"2:30 PM"
+  time:"2:30 PM",
+  image:"summer-days.jpg"
 },
 {
   id:26,
@@ -220,7 +253,8 @@ let mock = [{
   company_name:"Pixar",
   genre:"Documentary",
   day_of_the_week:"Saturday",
-  time:"2:30 PM"
+  time:"2:30 PM",
+  image:"shakespeare-high.jpg"
 },
 {
   id:27,
@@ -229,7 +263,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Drama",
   day_of_the_week:"Tuesday",
-  time:"10:30 PM"
+  time:"10:30 PM",
+  image:"oscar-pink.jpg"
 },
 {
   id:28,
@@ -238,7 +273,8 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Comedy|Musical| Romance",
   day_of_the_week:"Tuesday",
-  time:"6:30 PM"
+  time:"6:30 PM",
+  image:"presenting-lily.jpg"
 },
 {
   id:29,
@@ -247,7 +283,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"(no genres listed)",
   day_of_the_week:"Tuesday",
-  time:"10:30 AM"
+  time:"10:30 AM",
+  image:"sekirei.jpg"
 },
 {
   id:30,
@@ -256,7 +293,9 @@ let mock = [{
   company_name:"Pixar",
   genre:"Comedy|Crime",
   day_of_the_week:"Thursday",
-  time:"4:00 PM"},
+  time:"4:00 PM",
+  image:"sting.jpg"
+},
 {
   id:31,
   title:"Witness to Murder",
@@ -264,7 +303,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Crime|Drama|Film-Noir|Thriller",
   day_of_the_week:"Saturday",
-  time:"1:00 PM"},
+  time:"1:00 PM",
+  image:"witness-murder.jpg"
+},
 {
   id:32,
   title:"Torch Song Trilogy",
@@ -272,7 +313,9 @@ let mock = [{
   company_name:"Warner Bros.",
   genre:"Comedy|Drama|Romance",
   day_of_the_week:"Wednesday",
-  time:"8:00 PM"},
+  time:"8:00 PM",
+  image:"torch-song.jpg"
+},
 {
   id:33,
   title:"Defenders of Riga",
@@ -280,7 +323,9 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Action|Drama|War",
   day_of_the_week:"Saturday",
-  time:"6:30 PM"},
+  time:"6:30 PM",
+  image:"defenders.jpg"
+},
 {
   id:34,
   title:"Shrooms",
@@ -288,7 +333,9 @@ let mock = [{
   company_name:"Disney",
   genre:"Horror|Thriller",
   day_of_the_week:"Wednesday",
-  time:"4:00 PM"},
+  time:"4:00 PM",
+  image:"shrooms.jpg"
+},
 {
   id:35,
   title:"Stand Up and Fight",
@@ -296,7 +343,8 @@ let mock = [{
   company_name:"Pixar",
   genre:"Drama|Romance|Western",
   day_of_the_week:"Tuesday",
-  time:"3:00 PM"},
+  time:"3:00 PM",
+  image:"stand-up.jpg"},
 {
   id:36,
   title:"Devil's Carnival",
@@ -304,7 +352,9 @@ let mock = [{
   company_name:"Warner Bros.",
   genre:"Horror|Musical",
   day_of_the_week:"Tuesday",
-  time:"2:30 PM"},
+  time:"2:30 PM",
+  image:"devils-carnival.jpg"
+},
 {
   id:37,
   title:"War Lord",
@@ -312,7 +362,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Drama|Romance|War",
   day_of_the_week:"Friday",
-  time:"11:30 AM"},
+  time:"11:30 AM",
+  image:"war-lord.jpg"
+},
 {
   id:38,
   title:"Chhoti Si Baat",
@@ -320,7 +372,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Comedy|Romance",
   day_of_the_week:"Sunday",
-  time:"6:00 PM"},
+  time:"6:00 PM",
+  image:"chhoti.jpg"},
 {
   id:39,
   title:"Sharpe's Gold",
@@ -328,7 +381,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Action|Adventure|War",
   day_of_the_week:"Monday",
-  time:"7:00 PM"},
+  time:"7:00 PM",
+  image:"sharpes-gold.jpg"
+},
 {
   id:40,
   title:"White Men Can't Jump",
@@ -336,7 +391,9 @@ let mock = [{
   company_name:"Universal Pictures",
   genre:"Comedy|Drama",
   day_of_the_week:"Sunday",
-  time:"1:30 PM"},
+  time:"1:30 PM",
+  image:"white-men.jpg"
+},
 {
   id:41,
   title:"One Small Hitch",
@@ -344,7 +401,9 @@ let mock = [{
   company_name:"Warner Bros.",
   genre:"Comedy|Romance",
   day_of_the_week:"Thursday",
-  time:"10:30 PM"},
+  time:"10:30 PM",
+  image:"one-small-hitch.jpg"
+},
 {
   id:42,
   title:"Inception",
@@ -352,7 +411,9 @@ let mock = [{
   company_name:"Disney",
   genre:"Comedy|Mystery",
   day_of_the_week:"Monday",
-  time:"5:30 PM"},
+  time:"5:30 PM",
+  image:"inception.jpg"
+},
 {
   id:43,
   title:"Game of Chance (Onnenpeli)",
@@ -360,7 +421,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Comedy|Drama",
   day_of_the_week:"Saturday",
-  time:"12:30 PM"},
+  time:"12:30 PM",
+  image:"game-chance.jpg"
+},
 {
   id:44,
   title:"Quintet",
@@ -368,7 +431,9 @@ let mock = [{
   company_name:"Pixar",
   genre:"Mystery|Sci-Fi",
   day_of_the_week:"Wednesday",
-  time:"10:00 PM"},
+  time:"10:00 PM",
+  image:"quintet.jpg"
+},
 {
   id:45,
   title:"Kissed",
@@ -376,7 +441,9 @@ let mock = [{
   company_name:"Disney",
   genre:"Drama|Romance",
   day_of_the_week:"Thursday",
-  time:"10:00 AM"},
+  time:"10:00 AM",
+  image:"kissed.jpg"
+},
 {
   id:46,
   title:"Shadows (Cienie)",
@@ -384,7 +451,9 @@ let mock = [{
   company_name:"Pixar",
   genre:"Drama",
   day_of_the_week:"Wednesday",
-  time:"3:00 PM"},
+  time:"3:00 PM",
+  image:"shadows.jpg"
+},
 {
   id:47,
   title:"Dark Wind",
@@ -392,7 +461,9 @@ let mock = [{
   company_name:"Disney",
   genre:"Action|Mystery",
   day_of_the_week:"Sunday",
-  time:"9:00 PM"},
+  time:"9:00 PM",
+  image:"dark-wind.jpg"
+},
 {
   id:48,
   title:"Boyz N the Hood",
@@ -400,7 +471,9 @@ let mock = [{
   company_name:"Sony Pictures",
   genre:"Crime|Drama",
   day_of_the_week:"Wednesday",
-  time:"9:00 PM"},
+  time:"9:00 PM",
+  image:"boyz.jpg"
+},
 {
   id:49,
   title:"Dracula",
@@ -408,7 +481,9 @@ let mock = [{
   company_name:"Paramount",
   genre:"Horror",
   day_of_the_week:"Saturday",
-  time:"4:30 PM"},
+  time:"4:30 PM",
+  image:"dracula.jpg"
+},
 {
   id:50,
   title:"Pickpocket",
@@ -416,7 +491,8 @@ let mock = [{
   company_name:"Paramount",
   genre:"Crime|Drama",
   day_of_the_week:"Thursday",
-  time:"8:00 PM"
+  time:"8:00 PM",
+  image:"Pickpocket"
 }]
 
 export default mock;
