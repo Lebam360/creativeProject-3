@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import mock from './MOCK_DATA.json'
+import mock from './MOCK_DATA.js'
 
 Vue.config.productionTip = false
 
