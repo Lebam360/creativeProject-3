@@ -1,5 +1,41 @@
 <template>
-  <div class="about">
-    <h1>This is a browsing page</h1>
+<div>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+    <li class="pure-menu-item"><a @click="select('Sunday')" href="#" class="pure-menu-link">Sunday</a></li>
+      <li class="pure-menu-item"><a @click="select('Monday')" href="#" class="pure-menu-link">Monday</a></li>
+      <li class="pure-menu-item"><a @click="select('Tuesday')" href="#" class="pure-menu-link">Tuesday</a></li>
+      <li class="pure-menu-item"><a @click="select('Wednesday')" href="#" class="pure-menu-link">Wednesday</a></li>
+      <li class="pure-menu-item"><a @click="select('Thursday')" href="#" class="pure-menu-link">Thursday</a></li>
+      <li class="pure-menu-item"><a @click="select('Friday')" href="#" class="pure-menu-link">Friday</a></li>
+      <li class="pure-menu-item"><a @click="select('Saturday')" href="#" class="pure-menu-link">Saturday</a></li>
+    </ul>
   </div>
+  <MovieList :movies="movies" />
+</div>
 </template>
+
+<script>
+import MovieList from "../components/MovieList.vue"
+export default {
+  name: 'Browse',
+  components: {
+    MovieList
+  },
+  data() {
+    return {
+      day_of_the_week: '',
+    }
+  },
+  computed: {
+    movies() {
+      return this.$root.$data.movies.filter(product => product.day_of_the_week === this.day_of_the_week);
+    }
+  },
+  methods: {
+    select(day_of_the_week) {
+      this.day_of_the_week = day_of_the_week;
+    }
+  }
+}
+</script>

@@ -36,7 +36,7 @@ let mock = [{
 },
 {
   id:5,
-  title:"Toy, The",
+  title:"Toy",
   director_last_name:"Yeskov",
   company_name:"Sony Pictures",
   genre:"Comedy",
@@ -109,7 +109,7 @@ let mock = [{
   time:"9:00 PM"},
 {
   id:14,
-  title:"Darkman II: Return of Durant, The",
+  title:"Darkman II: Return of Durant",
   director_last_name:"Gregg",
   company_name:"Universal Pictures",
   genre:"Action|Crime|Horror",

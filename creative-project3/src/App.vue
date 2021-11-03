@@ -14,6 +14,11 @@
         </div>
     </div>
     <router-view/>
+    <div class="footer">
+      <a href="https://github.com/Lebam360/creativeProject-3">Github Repsitory</a>
+      <br> <a href="http://anyaanderson.com">Link back to Anya Anderson's Website</a>
+      <br> <a href="http://alexauferg.com/">Link back to Alexa Urrea's Website</a>
+    </div>
   </div>
 </template>
 
@@ -37,5 +42,11 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.footer {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  color: #6b87d8;
 }
 </style>
