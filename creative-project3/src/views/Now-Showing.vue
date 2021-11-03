@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1> Today is  {{ getDayOfWeek() }} </h1>
+    <h1 class="title"> Today is  {{ getDayOfWeek() }} </h1>
     <MovieList :movies="movies" />
   </div>
 </template>

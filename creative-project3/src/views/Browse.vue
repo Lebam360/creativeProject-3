@@ -13,6 +13,7 @@
   </div>
   <MovieList :movies="movies" />
   <div v-if="movies.length == 0">
+    <h1 class="title">Select a day above to browse by day.</h1>
     <img src="/images/film.png">
   </div>
 </div>

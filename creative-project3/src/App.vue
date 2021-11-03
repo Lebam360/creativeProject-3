@@ -24,30 +24,41 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Papyrus, fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  /*background: #B8CCE0;*/
+  color: #BEBEBE;
+}
+
+body {
+  background: #003645;
 }
 
 #nav {
   padding: 30px;
+  background-color: #800000;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #BEBEBE;
 }
 
 #nav a.router-link-exact-active {
   color: #786AD8;
 }
 .footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: auto;
   width: 100%;
   text-align: center;
   color: #6b87d8;
+  background-color: #800000;
 }
+.footer a {
+  color: #FAF9F6;
+}
+
 </style>
