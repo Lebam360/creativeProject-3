@@ -4,13 +4,14 @@
     <div class="movie" v-for="movie in movies" :key="movie.id">
       <div class="info">
         <h1>{{movie.title}}</h1>
-        <p>{{movie.company_name}}</p>
+        <h6>{{movie.company_name}}</h6>
       </div>
       <div class="image">
         <!--<img :src="'/images/movies/'+movie.image">-->
       </div>
-      <div class="price">
-        <!--<h2>{{movie.price}}</h2>-->
+      <div class="time">
+        <h2>{{movie.day_of_the_week}}</h2>
+        <h2>{{movie.time}}</h2>
       </div>
     </div>
   </div>
@@ -60,8 +61,8 @@ export default {
 }
 
 .info {
-  background: #F2921D;
-  color: #000;
+  background: #2C3E50;
+  color: #bacbdd;
   padding: 10px 30px;
   height: 80px;
 }
@@ -78,7 +79,7 @@ export default {
   font-size: 12px;
 }
 
-.price h2 {
+.time h2 {
   margin-right: 20px;
 }
 
@@ -87,8 +88,7 @@ export default {
   font-size: 10px;
 }
 
-
-.price {
+.time {
   display: flex;
 }
 

@@ -12,6 +12,9 @@
     </ul>
   </div>
   <MovieList :movies="movies" />
+  <div v-if="movies.length == 0">
+    <img src="/images/film.png">
+  </div>
 </div>
 </template>
 
@@ -29,7 +32,7 @@ export default {
   },
   computed: {
     movies() {
-      return this.$root.$data.movies.filter(product => product.day_of_the_week === this.day_of_the_week);
+      return this.$root.$data.movies.filter(movie => movie.day_of_the_week === this.day_of_the_week);
     }
   },
   methods: {

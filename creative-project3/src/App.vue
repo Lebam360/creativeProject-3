@@ -29,6 +29,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  /*background: #B8CCE0;*/
 }
 
 #nav {
@@ -41,7 +42,7 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #786AD8;
 }
 .footer {
   height: auto;
