@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style scoped>
-.pure-menu-item {
+.pure-menu-link:hover {
+  color: #404040;
+}
+.pure-menu-link {
+  color: #BEBEBE;
 }
 </style>
