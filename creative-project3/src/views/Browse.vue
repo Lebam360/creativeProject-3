@@ -51,6 +51,10 @@ export default {
 .pure-menu-link {
   color: #BEBEBE;
 }
-
+@media only screen and (max-width: 800px) {
+  .pure-menu-horizontal  {
+    white-space: normal;
+  }
 }
+
 </style>
