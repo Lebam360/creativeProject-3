@@ -31,4 +31,18 @@ text-align: center;
 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
   0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
+/*@media*/
+@media only screen and (max-width: 400px) {
+  img  {
+    width: 100%;
+  }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+}
 </style>

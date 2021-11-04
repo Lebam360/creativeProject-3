@@ -51,4 +51,6 @@ export default {
 .pure-menu-link {
   color: #BEBEBE;
 }
+
+}
 </style>
