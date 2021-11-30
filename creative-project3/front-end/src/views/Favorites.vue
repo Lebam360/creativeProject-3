@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1 class="title">Favorites</h1>
-    <MovieList :movies="movies" />
+    <p>Here is what the crowd enjoys! Feel free to add your own favorites!</p>
   </div>
 </template>
 

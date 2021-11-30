@@ -101,13 +101,6 @@ app.put('/api/items/:id', async (req, res) => {
     let item = await Item.findOne({
       _id: req.params.id
     });
-    item.title = req.body.title,
-    item.director_last_name = req.body.director_last_name,
-    item.company_name = req.body.company_name,
-    item.genre = req.body.genre,
-    item.day_of_the_week = req.body.day_of_the_week,
-    item.time = req.body.time,
-    item.image = req.body.image,
     item.ranking = req.body.ranking,
     await item.save();
     res.sendStatus(200);
