@@ -105,7 +105,7 @@ app.put('/api/items/:id', async (req, res) => {
     item.genre = req.body.genre,
     item.day_of_the_week = req.body.day_of_the_week,
     item.time = req.body.time,
-    item.image = req.body.image,    
+    item.image = req.body.image,
     await item.save();
     res.sendStatus(200);
   } catch (error) {
