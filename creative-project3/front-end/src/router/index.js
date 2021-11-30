@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import NowShowing from '../views/Now-Showing.vue'
 import Browse from '../views/Browse.vue'
+import Favorites from '../views/Favorites.vue'
 
 Vue.use(VueRouter)
 

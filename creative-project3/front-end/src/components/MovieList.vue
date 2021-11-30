@@ -14,6 +14,9 @@
         <h2>{{movie.day_of_the_week}}</h2>
         <h2>{{movie.time}}</h2>
       </div>
+      <div class="favorites">
+        <button class="auto" v-on:click="addItemToFavs(movie)">Add to Favorites</button>
+      </div>
     </div>
   </div>
 </div>
@@ -23,8 +26,19 @@
 export default {
   name: 'MovieList',
   props: {
-    movies: Array
+    movies: Array,
+    favs: Array
   },
+  computed: {
+    favsItems() {
+      return this.$root.$data.favs;
+    }
+  },
+  methods: {
+    addItemToFavs: function(item) {
+      this.$root.$data.favs.push(item);
+    }
+  }
 }
 </script>
 

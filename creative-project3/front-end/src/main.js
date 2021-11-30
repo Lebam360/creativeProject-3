@@ -6,7 +6,8 @@ import mock from './MOCK_DATA.js'
 
 
 let data = {
-  movies: mock
+  movies: mock,
+  favs: []
 }
 
 new Vue({

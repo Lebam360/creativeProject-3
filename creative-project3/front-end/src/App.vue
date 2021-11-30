@@ -10,7 +10,8 @@
         <router-link to="/">Home</router-link> |
         <router-link to="/showing">Now Showing</router-link> |
         <router-link to="/browse">Browse</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">About</router-link> |
+        <router-link to="/favorites">Favorites</router-link>
         </div>
     </div>
     <router-view/>
