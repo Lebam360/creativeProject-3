@@ -32,6 +32,7 @@ const itemSchema = new mongoose.Schema({
   day_of_the_week: String,
   time: String,
   image: String,
+  ranking: String // might have to change to int
 });
 
 // Create a model for items in the museum.
@@ -59,6 +60,7 @@ app.post('/api/items', async (req, res) => {
     day_of_the_week: req.body.day_of_the_week,
     time: req.body.time,
     image: req.body.image,
+    ranking: req.body.ranking
   });
   try {
     await item.save();
@@ -106,6 +108,7 @@ app.put('/api/items/:id', async (req, res) => {
     item.day_of_the_week = req.body.day_of_the_week,
     item.time = req.body.time,
     item.image = req.body.image,
+    item.ranking = req.body.ranking,
     await item.save();
     res.sendStatus(200);
   } catch (error) {
