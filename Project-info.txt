@@ -1,3 +1,13 @@
+Project 4:
+Fix glowing title
+format favorites page
+	display favorites
+	delete button
+	ranking - (stars? put a cap and min)
+On Components 
+	make an add button
+Possible to edit? - only edit rankings
+----------------------------
 Make mock data of movie showings
 
 Make a movie theater website
