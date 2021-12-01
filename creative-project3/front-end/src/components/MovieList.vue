@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'MovieList',
   props: {
@@ -37,6 +38,24 @@ export default {
   methods: {
     addItemToFavs: function(item) {
       this.$root.$data.favs.push(item);
+    },
+    async addItem(item) {
+      try {
+        let response = await axios.post('/api/items', {
+          title: item.title,
+          director_last_name: item.director_last_name,
+          company_name: item.company_name,
+          genre: item.genre,
+          day_of_the_week: item.day_of_the_week,
+          time: item.time,
+          image: item.image,
+          ranking: "4", //as a defult value
+        });
+        this.addItem = response.data;
+        console.log("added item to database")
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 }

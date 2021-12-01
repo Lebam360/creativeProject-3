@@ -18,6 +18,9 @@
             <h2>{{movie.day_of_the_week}}</h2>
             <h2>{{movie.time}}</h2>
           </div>
+          <div class="favorites">
+            <button class="auto" v-on:click="deleteItem(movie)">Remove from Favorites</button>
+          </div>
         </div>
       </div>
   </div>
@@ -25,17 +28,48 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'MovieList',
   props: {
     movies: Array,
     favs: Array
   },
+  data() {
+    return {
+      items: [],
+    }
+  },
+  created() {
+    this.getItems();
+  },
   computed: {
     favsItems() {
       return this.$root.$data.favs;
     }
   },
+  methods: {
+    async getItems() {
+      try {
+        let response = await axios.get("/api/items");
+        this.items = response.data;
+        return true;
+      } catch (error) {
+        console.log(error);
+        console.log("I am a error getting items")
+      }
+    },
+    async deleteItem(item) {
+      try {
+        await axios.delete("/api/items/" + item._id);
+        this.findItem = null;
+        this.getItems();
+        return true;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  }
 }
 </script>
 <style scoped>
