@@ -32,6 +32,7 @@ const itemSchema = new mongoose.Schema({
   day_of_the_week: String,
   time: String,
   image: String,
+  origId: String,
   ranking: String // might have to change to int
 });
 
@@ -60,6 +61,7 @@ app.post('/api/items', async (req, res) => {
     day_of_the_week: req.body.day_of_the_week,
     time: req.body.time,
     image: req.body.image,
+    origId: req.body.origId,
     ranking: req.body.ranking
   });
   try {
@@ -80,6 +82,19 @@ app.get('/api/items', async (req, res) => {
   try {
     let items = await Item.find();
     res.send(items);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
+// Get a the ranking of an item
+app.get('/api/items/:id', async (req, res) => {
+  try {
+    let item = await Item.findOne({
+      _id: req.params.id
+    });
+    res.send(item.ranking);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);

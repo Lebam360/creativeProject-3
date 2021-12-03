@@ -2,6 +2,7 @@
 <div class="wrapper">
   <div class="movies">
     <div class="movie" v-for="movie in movies" :key="movie.id">
+
       <div class="image">
         <img :src="'/images/posters/'+movie.image">
       </div>
@@ -29,12 +30,15 @@ export default {
   data() {
     return {
       addedItem: null,
-      //favoriteItems: [],
+      favoriteItems: [],
     }
   },
   props: {
     movies: Array,
     favs: Array
+  },
+  created() {
+    this.getItems();
   },
   computed: {
     favsItems() {
@@ -45,19 +49,34 @@ export default {
     async getItems() {
       try {
         let response = await axios.get("/api/items");
-        this.favoriteItems = response.data;
+        this.$root.$data.favs = response.data;
         return true;
       } catch (error) {
         console.log(error);
         console.log("I am an error getting items")
       }
     },
+    isIncluded(item) {
+      this.getItems();
+      if (this.favoriteItems.length == 0)  {
+        return false;
+      }
+      for (let i = 0; i < this.favoriteItems.length; i++) {
+        if (item.id == this.favoriteItems[i].origId) {
+          return true;
+        }
+      }
+      return false;
+    },
     async addItem(item) {
-
       try {
-        if(this.$root.$data.favs.includes(item)) {
+        let included = this.isIncluded(item);
+        if (included) {
+        //if(this.$root.$data.favs.includes(item)) {
           console.log("item already in database")
           // ranking++
+          //let rankOfItem = await axios.get("/api/items/" + item._id);
+          //console.log(rankOfItem);
         } else {
           let response = await axios.post('/api/items', {
             title: item.title,
@@ -67,9 +86,10 @@ export default {
             day_of_the_week: item.day_of_the_week,
             time: item.time,
             image: item.image,
+            origId: item.id,
             ranking: "4", //as a defult value
           });
-          this.$root.$data.favs.push(item)
+          //this.$root.$data.favs.push(item)
           this.addedItem = response.data;
         }
       } catch (error) {

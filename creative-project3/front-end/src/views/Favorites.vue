@@ -5,6 +5,9 @@
   <div class="wrapper">
       <div class="FavoriteItems">
         <div class="items" v-for="item in items" :key="item.id">
+          <div class="ranking">
+            <h2>Ranking: {{item.ranking}}</h2>
+          </div>
           <div class="image">
             <img :src="'/images/posters/'+item.image">
           </div>
