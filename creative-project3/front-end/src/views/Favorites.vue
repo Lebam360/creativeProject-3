@@ -195,12 +195,20 @@ img {
 button {
   height: 50px;
   background: #000;
-  color: white;
+  color: black;
   border: none;
 }
 
 .auto {
   margin-left: auto;
+}
+
+button{
+  background-color: #F9E076;
+}
+
+button:hover{
+  background-color: brown;
 }
 
 .favorites {

@@ -26,6 +26,11 @@
 import axios from 'axios';
 export default {
   name: 'MovieList',
+  data() {
+    return {
+      addedItem: null
+    }
+  },
   props: {
     movies: Array,
     favs: Array
@@ -36,9 +41,6 @@ export default {
     }
   },
   methods: {
-    addItemToFavs: function(item) {
-      this.$root.$data.favs.push(item);
-    },
     async addItem(item) {
       try {
         let response = await axios.post('/api/items', {
@@ -51,7 +53,7 @@ export default {
           image: item.image,
           ranking: "4", //as a defult value
         });
-        this.addItem = response.data;
+        this.addedItem = response.data;
         console.log("added item to database")
       } catch (error) {
         console.log(error);
@@ -131,6 +133,14 @@ button {
   background: #000;
   color: white;
   border: none;
+}
+
+button:hover{
+  background-color: #808080;
+}
+
+button:focus{
+  background-color: #F9E076;
 }
 
 .auto {
