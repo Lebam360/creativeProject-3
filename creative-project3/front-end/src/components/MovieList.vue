@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       addedItem: null,
-      favoriteItems: [],
+      //favoriteItems: [],
     }
   },
   props: {
@@ -49,18 +49,15 @@ export default {
         return true;
       } catch (error) {
         console.log(error);
-        console.log("I am a error getting items")
+        console.log("I am an error getting items")
       }
     },
-  //  searchForDuplicates(checkMe) {
-  //    this.getItems()
-//      let items = this.favoriteItems.filter(item => item.title.toLowerCase().startsWith(checkMe.toLowerCase()));
-  //    return items.sort((a, b) => a.title > b.title);
-//    },
     async addItem(item) {
+
       try {
-    //    let duplicateItems = searchForDuplicates;
-    //    if (duplicateItems.length > 0) {
+        if(this.$root.$data.favs.includes(item)) {
+          console.log("item already in database")
+        } else {
           let response = await axios.post('/api/items', {
             title: item.title,
             director_last_name: item.director_last_name,
@@ -71,12 +68,9 @@ export default {
             image: item.image,
             ranking: "4", //as a defult value
           });
-        this.addedItem = response.data;
-        console.log("added item to database")
-    //    }
-    //    else {
-  //        console.log("Item already in database")
-    //    }
+          this.$root.$data.favs.push(item)
+          this.addedItem = response.data;
+        }
       } catch (error) {
         console.log(error);
       }

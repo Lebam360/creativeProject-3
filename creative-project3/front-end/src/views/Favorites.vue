@@ -3,27 +3,6 @@
   <h1 class="title">Favorites</h1>
   <p>Here is what the crowd enjoys! Feel free to add your own favorites!</p>
   <div class="wrapper">
-
-      <div class="movies">
-        <div class="movie" v-for="movie in this.$root.$data.favs" :key="movie.id">
-          <div class="image">
-            <img :src="'/images/posters/'+movie.image">
-        </div>
-          <div class="info">
-            <h1>{{movie.title}}</h1>
-            <h6>{{movie.company_name}}</h6>
-            <h5>{{movie.genre}}</h5>
-          </div>
-          <div class="time">
-            <h2>{{movie.day_of_the_week}}</h2>
-            <h2>{{movie.time}}</h2>
-          </div>
-          <div class="favorites">
-            <button class="auto" v-on:click="deleteItem(movie)">Remove from Favorites</button>
-          </div>
-        </div>
-      </div>
-
       <div class="FavoriteItems">
         <div class="items" v-for="item in items" :key="item.id">
           <div class="image">
@@ -84,6 +63,8 @@ export default {
         await axios.delete("/api/items/" + item._id);
         this.findItem = null;
         this.getItems();
+        const ind = this.$root.$data.favs.indexOf(item)
+        this.$root.$data.favs.splice(ind,1)
         return true;
       } catch (error) {
         console.log(error);
