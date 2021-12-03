@@ -57,6 +57,7 @@ export default {
       try {
         if(this.$root.$data.favs.includes(item)) {
           console.log("item already in database")
+          // ranking++
         } else {
           let response = await axios.post('/api/items', {
             title: item.title,
