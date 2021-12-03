@@ -15,7 +15,7 @@
         <h2>{{movie.time}}</h2>
       </div>
       <div class="favorites">
-        <button class="auto" v-on:click="addItemToFavs(movie)">Add to Favorites</button>
+        <button class="auto" v-on:click="addItem(movie)">Add to Favorites</button>
       </div>
     </div>
   </div>

@@ -71,7 +71,7 @@ export default {
   methods: {
     async getItems() {
       try {
-        let response = await axios.get("/items");
+        let response = await axios.get("/api/items");
         this.items = response.data;
         return true;
       } catch (error) {
@@ -81,7 +81,7 @@ export default {
     },
     async deleteItem(item) {
       try {
-        await axios.delete("/items/" + item._id);
+        await axios.delete("/api/items/" + item._id);
         this.findItem = null;
         this.getItems();
         return true;
@@ -120,6 +120,33 @@ export default {
 }
 
 .movie .image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+
+.item {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  margin: 10px;
+  margin-top: 50px;
+  width: 200px;
+}
+
+.item img {
+  border: 2px solid #333;
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.item .image {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
