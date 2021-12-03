@@ -64,11 +64,19 @@ export default {
     },
     async deleteItem(item) {
       try {
-        await axios.delete("/api/items/" + item._id);
-        this.findItem = null;
-        this.getItems();
-        const ind = this.$root.$data.favs.indexOf(item)
-        this.$root.$data.favs.splice(ind,1)
+        if (item.ranking == 1) {
+          await axios.delete("/api/items/" + item._id);
+          this.findItem = null;
+          this.getItems();
+          const ind = this.$root.$data.favs.indexOf(item)
+          this.$root.$data.favs.splice(ind,1)
+        }
+        else {
+          await axios.put("/api/items/" + item._id, {
+            ranking: item.ranking - 1,
+            });
+        }
+        this.getItems
         return true;
       } catch (error) {
         console.log(error);

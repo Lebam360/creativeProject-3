@@ -62,21 +62,43 @@ export default {
         return false;
       }
       for (let i = 0; i < this.$root.$data.favs.length; i++) {
-        if (item.title== this.$root.$data.favs[i].title) {
+        if (item.id== this.$root.$data.favs[i].origId) {
           return true;
         }
       }
       return false;
     },
+    async getRanking(item) {
+      try {
+        let retreiveRanking = 0;
+        for (let i = 0; i < this.$root.$data.favs.length; i++) {
+          if (item.title== this.$root.$data.favs[i].title) {
+            retreiveRanking = this.$root.$data.favs[i];
+          }
+        }
+        if (retreiveRanking != 0) {
+          let response = await axios.get("/api/items/" + retreiveRanking._id);
+          return response.data;
+        }
+        else {
+          return 0;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
     async addItem(item) {
       try {
         let included = this.isIncluded(item);
         if (included) {
-        //if(this.$root.$data.favs.includes(item)) {
           console.log("item already in database")
           // ranking++
-          //let rankOfItem = await axios.get("/api/items/" + item._id);
-          //console.log(rankOfItem);
+          let favItem = await this.getRanking(item)
+          if (favItem.ranking != 10) {
+            await axios.put("/api/items/" + favItem._id, {
+              ranking: favItem.ranking + 1,
+            });
+          }
         } else {
           let response = await axios.post('/api/items', {
             title: item.title,
@@ -89,12 +111,12 @@ export default {
             origId: item.id,
             ranking: "4", //as a defult value
           });
-          this.getItems();
           this.addedItem = response.data;
         }
       } catch (error) {
         console.log(error);
       }
+      this.getItems();
     },
   }
 }

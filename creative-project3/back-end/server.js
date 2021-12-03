@@ -33,7 +33,7 @@ const itemSchema = new mongoose.Schema({
   time: String,
   image: String,
   origId: String,
-  ranking: String // might have to change to int
+  ranking: Number // might have to change to int
 });
 
 // Create a model for items in the museum.
@@ -94,7 +94,7 @@ app.get('/api/items/:id', async (req, res) => {
     let item = await Item.findOne({
       _id: req.params.id
     });
-    res.send(item.ranking);
+    res.send(item);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
