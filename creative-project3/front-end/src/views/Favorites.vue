@@ -23,6 +23,26 @@
           </div>
         </div>
       </div>
+
+      <div class="FavoriteItems">
+        <div class="items" v-for="item in items" :key="item.id">
+          <div class="image">
+            <img :src="'/images/posters/'+item.image">
+          </div>
+          <div class="info">
+            <h1>{{item.title}}</h1>
+            <h6>{{item.company_name}}</h6>
+            <h5>{{item.genre}}</h5>
+          </div>
+          <div class="time">
+            <h2>{{item.day_of_the_week}}</h2>
+            <h2>{{item.time}}</h2>
+          </div>
+          <div class="favorites">
+            <button class="auto" v-on:click="deleteItem(item)">Remove from Favorites</button>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 </template>
@@ -51,7 +71,7 @@ export default {
   methods: {
     async getItems() {
       try {
-        let response = await axios.get("/api/items");
+        let response = await axios.get("/items");
         this.items = response.data;
         return true;
       } catch (error) {
@@ -61,7 +81,7 @@ export default {
     },
     async deleteItem(item) {
       try {
-        await axios.delete("/api/items/" + item._id);
+        await axios.delete("/items/" + item._id);
         this.findItem = null;
         this.getItems();
         return true;

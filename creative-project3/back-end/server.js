@@ -40,7 +40,7 @@ const Item = mongoose.model('Item', itemSchema);
 
 // Upload a photo. Uses the multer middleware for the upload and then returns
 // the path where the photo is stored in the file system.
-app.post('/api/photos', upload.single('photo'), async (req, res) => {
+app.post('/photos', upload.single('photo'), async (req, res) => {
   // Just a safety check
   if (!req.file) {
     return res.sendStatus(400);
@@ -51,7 +51,7 @@ app.post('/api/photos', upload.single('photo'), async (req, res) => {
 });
 
 // Create a new item in the museum: takes a title and a path to an image.
-app.post('/api/items', async (req, res) => {
+app.post('/items', async (req, res) => {
   const item = new Item({
     title:req.body.title,
     director_last_name: req.body.director_last_name,
@@ -71,10 +71,15 @@ app.post('/api/items', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 // Get a list of all of the items in the museum.
-app.get('/api/items', async (req, res) => {
+app.get('/items', async (req, res) => {
   try {
     let items = await Item.find();
+    res.send('In /items!');
     res.send(items);
   } catch (error) {
     console.log(error);
@@ -83,7 +88,7 @@ app.get('/api/items', async (req, res) => {
 });
 
 // Delete a specific item
-app.delete('/api/items/:id', async (req, res) => {
+app.delete('/items/:id', async (req, res) => {
   try {
     await Item.deleteOne({
       _id: req.params.id
@@ -96,7 +101,7 @@ app.delete('/api/items/:id', async (req, res) => {
 });
 
 // Edit a specific item
-app.put('/api/items/:id', async (req, res) => {
+app.put('/items/:id', async (req, res) => {
   try {
     let item = await Item.findOne({
       _id: req.params.id
@@ -110,4 +115,4 @@ app.put('/api/items/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(3001, () => console.log('Server listening on port 3001!'));
