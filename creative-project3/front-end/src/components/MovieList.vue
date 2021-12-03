@@ -28,7 +28,8 @@ export default {
   name: 'MovieList',
   data() {
     return {
-      addedItem: null
+      addedItem: null,
+      favoriteItems: [],
     }
   },
   props: {
@@ -41,24 +42,45 @@ export default {
     }
   },
   methods: {
+    async getItems() {
+      try {
+        let response = await axios.get("/api/items");
+        this.favoriteItems = response.data;
+        return true;
+      } catch (error) {
+        console.log(error);
+        console.log("I am a error getting items")
+      }
+    },
+  //  searchForDuplicates(checkMe) {
+  //    this.getItems()
+//      let items = this.favoriteItems.filter(item => item.title.toLowerCase().startsWith(checkMe.toLowerCase()));
+  //    return items.sort((a, b) => a.title > b.title);
+//    },
     async addItem(item) {
       try {
-        let response = await axios.post('/api/items', {
-          title: item.title,
-          director_last_name: item.director_last_name,
-          company_name: item.company_name,
-          genre: item.genre,
-          day_of_the_week: item.day_of_the_week,
-          time: item.time,
-          image: item.image,
-          ranking: "4", //as a defult value
-        });
+    //    let duplicateItems = searchForDuplicates;
+    //    if (duplicateItems.length > 0) {
+          let response = await axios.post('/api/items', {
+            title: item.title,
+            director_last_name: item.director_last_name,
+            company_name: item.company_name,
+            genre: item.genre,
+            day_of_the_week: item.day_of_the_week,
+            time: item.time,
+            image: item.image,
+            ranking: "4", //as a defult value
+          });
         this.addedItem = response.data;
         console.log("added item to database")
+    //    }
+    //    else {
+  //        console.log("Item already in database")
+    //    }
       } catch (error) {
         console.log(error);
       }
-    }
+    },
   }
 }
 </script>
