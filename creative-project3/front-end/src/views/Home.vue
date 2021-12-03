@@ -10,7 +10,8 @@
         experience with many throwback movies. Click on the different tabs to browse through our many options!
         The "Now Showing" tab will display the movies that are playing today and their show times. In the "Browse"
         tab, you can search for movies by what day they will be showing. To learn more about us, click on the "About"
-        page!</p>
+        page!</p> 
+        <p>We hope to allow people to vote for their favorite movies. Please feel free to hit the "Add to Favorites" button to either add that movie to our list of favorites or to increase the ranking of the movie on the Favorites page.</p>
     </div>
   </div>
 </template>
@@ -28,8 +29,8 @@ export default {
 .title {
 color: #fff;
 text-align: center;
-text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
-  0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+//text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+//  0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
 /*@media*/
 @media only screen and (max-width: 400px) {

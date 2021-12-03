@@ -109,7 +109,7 @@ export default {
             time: item.time,
             image: item.image,
             origId: item.id,
-            ranking: "4", //as a defult value
+            ranking: 1, //as a defult value
           });
           this.addedItem = response.data;
         }

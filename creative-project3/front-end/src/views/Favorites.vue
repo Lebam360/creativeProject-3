@@ -64,18 +64,19 @@ export default {
     },
     async deleteItem(item) {
       try {
-        if (item.ranking == 1) {
+      // Commenting this out because you have to refresh the page to see the ranking change - kinda lame
+      //  if (item.ranking == 1) {
           await axios.delete("/api/items/" + item._id);
           this.findItem = null;
           this.getItems();
           const ind = this.$root.$data.favs.indexOf(item)
           this.$root.$data.favs.splice(ind,1)
-        }
-        else {
-          await axios.put("/api/items/" + item._id, {
-            ranking: item.ranking - 1,
-            });
-        }
+      //  }
+      //  else {
+    //      await axios.put("/api/items/" + item._id, {
+    //        ranking: item.ranking - 1,
+    //        });
+    //    }
         this.getItems
         return true;
       } catch (error) {
@@ -92,54 +93,34 @@ export default {
   justify-content: center;
 }
 
-.movies {
+.FavoriteItems {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.movie {
-  margin: 10px;
-  margin-top: 50px;
-  width: 200px;
-}
-
-.movie img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.movie .image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-
-
-.item {
+.items {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.item {
+.items {
   margin: 10px;
   margin-top: 50px;
   width: 200px;
 }
 
-.item img {
+.items img {
   border: 2px solid #333;
   height: 250px;
   width: 200px;
   object-fit: cover;
 }
 
-.item .image {
+.items .image {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
