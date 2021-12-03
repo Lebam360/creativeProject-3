@@ -58,11 +58,11 @@ export default {
     },
     isIncluded(item) {
       this.getItems();
-      if (this.favoriteItems.length == 0)  {
+      if (this.$root.$data.favs.length == 0)  {
         return false;
       }
-      for (let i = 0; i < this.favoriteItems.length; i++) {
-        if (item.id == this.favoriteItems[i].origId) {
+      for (let i = 0; i < this.$root.$data.favs.length; i++) {
+        if (item.title== this.$root.$data.favs[i].title) {
           return true;
         }
       }
@@ -89,7 +89,7 @@ export default {
             origId: item.id,
             ranking: "4", //as a defult value
           });
-          //this.$root.$data.favs.push(item)
+          this.getItems();
           this.addedItem = response.data;
         }
       } catch (error) {

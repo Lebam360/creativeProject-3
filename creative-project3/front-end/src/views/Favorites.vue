@@ -55,6 +55,7 @@ export default {
       try {
         let response = await axios.get("/api/items");
         this.items = response.data;
+        this.$root.$data.favs = response.data;
         return true;
       } catch (error) {
         console.log(error);
