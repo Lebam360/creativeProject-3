@@ -8,7 +8,7 @@
         <div class="movie" v-for="movie in this.$root.$data.favs" :key="movie.id">
           <div class="image">
             <img :src="'/images/posters/'+movie.image">
-          </div>
+        </div>
           <div class="info">
             <h1>{{movie.title}}</h1>
             <h6>{{movie.company_name}}</h6>
@@ -152,11 +152,19 @@ export default {
   margin-bottom: 5px;
 }
 
+img {
+  border: 2px solid #333;
+  height: 250px;
+  width: 255px;
+  object-fit: cover;
+}
+
 .info {
   background-color: #800000;
   color: #bacbdd;
   padding: 10px 30px;
   height: 220px;
+  width: 200px;
 }
 
 .info h1 {
@@ -193,5 +201,9 @@ button {
 
 .auto {
   margin-left: auto;
+}
+
+.favorites {
+  padding-bottom: 20px;
 }
 </style>
