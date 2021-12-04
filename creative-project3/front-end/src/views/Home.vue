@@ -10,8 +10,8 @@
         experience with many throwback movies. Click on the different tabs to browse through our many options!
         The "Now Showing" tab will display the movies that are playing today and their show times. In the "Browse"
         tab, you can search for movies by what day they will be showing. To learn more about us, click on the "About"
-        page!</p> 
-        <p>We hope to allow people to vote for their favorite movies. Please feel free to hit the "Add to Favorites" button to either add that movie to our list of favorites or to increase the ranking of the movie on the Favorites page.</p>
+        page!</p>
+        <p>We hope to allow people to vote for their favorite movies. Please feel free to hit the "Add to Favorites" button to either add that movie to our list of favorites or to increase the ranking of the movie on the Favorites page. Please note that in order for us to process your add to favorite requests, please do not rapidly click the "Add to Favorites" button.</p>
     </div>
   </div>
 </template>

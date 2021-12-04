@@ -113,7 +113,7 @@ export default {
           });
           this.addedItem = response.data;
           //attempt to fix rapid button clicking duplicate problem
-          this.$root.$data.favs.push(this.addedItem)
+          //dthis.$root.$data.favs.push(this.addedItem)
         }
       } catch (error) {
         console.log(error);
